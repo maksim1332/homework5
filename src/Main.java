@@ -5,8 +5,7 @@ public class Main {
         int clientOS = 0;
         if (clientOS < 1) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-        if (clientOS == 1) {
+        } else if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         // tesk2
@@ -15,7 +14,7 @@ public class Main {
         if (clientOS1 < 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else if (clientOS1 == 1 && clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
         if (clientOS1 < 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
@@ -23,16 +22,17 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         //tesk 3
-        int year = 2021;
+        int year = 2022;
         if (year > 1584) {
-            if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-                System.out.println(year + " год является високосным");
-            } else {
-                System.out.println(year + " год не является високосным");
+            if (year % 4 == 0 && year % 100 != 0) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " год является високосным");
+                }
+            }else {
+                    System.out.println(year + " год не является високосным");
+                }
             }
-        } else {
-            System.out.println("Год создания понятия високосный 1585!");
-        }
+
         //tesk4
         int deliveryDistance = 95;
         if (deliveryDistance <= 20) {
@@ -46,8 +46,8 @@ public class Main {
         }
         //tesk5
         int monthNumber = 12;
-        switch(monthNumber) {
-            case 12 :
+        switch (monthNumber) {
+            case 12:
             case 1:
             case 2:
                 System.out.println("Этот месяц является зимним!");
@@ -69,6 +69,6 @@ public class Main {
                 break;
             default:
                 System.out.println("Такого месяца не существует!");
-            }
+        }
     }
 }
